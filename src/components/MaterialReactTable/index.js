@@ -115,7 +115,7 @@ function MRTable(
       draggingBorderColor: theme.palette.secondary.main,
       menuBackgroundColor: theme.palette.background.card,
       selectedRowBackgroundColor: theme.palette.background.default,
-      transition: "all 350ms ease-out",
+      transition: "all 350ms ease-out, background-color 0ms",
     }),
     muiCircularProgressProps: { color: "info" },
     muiTablePaperProps: muiTablePaperProps,
@@ -129,6 +129,7 @@ function MRTable(
     muiTableBodyRowProps: ({ row }) => ({
       onClick: () => { if (onRowClick !== null) { onRowClick(row); } },
       sx: () => ({
+        transition: "background-color 0ms",
         // backgroundColor: row.original.updatedUtc > previousUpdatedTimestamp / 1000 ? "table.rowHighlight" : "table.row",
       }),
     }),
@@ -136,6 +137,7 @@ function MRTable(
       onClick: (e) => { if (onCellClick !== null) { onCellClick(e, cell); } },
       sx: (theme) => ({
         fontSize: "14px",
+        fontWeight: "regular",
         px: 2,
         textDecoration: clickableColumn.includes(cell.column.id) ? "underline" : "none",
         color: clickableColumn.includes(cell.column.id) ? "info.main" : theme.palette.text.main,

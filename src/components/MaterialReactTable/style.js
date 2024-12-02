@@ -1,6 +1,7 @@
 export const muiTablePaperProps = {
   elevation: 1,
   sx: {
+    transition: "background-color 0ms",
     borderRadius: 2,
     paddingBottom: 2,
   },
@@ -15,13 +16,13 @@ export const muiFilterTextFieldProps = {
 };
 export const muiTopToolbarProps = {
   sx: (theme) => ({
-    transition: "all 350ms ease-out",
+    transition: "all 350ms ease-out, background-color 0ms",
     color: theme.palette.text.main,
   }),
 };
 export const muiBottomToolbarProps = {
   sx: (theme) => ({
-    transition: "all 350ms ease-out",
+    transition: "all 350ms ease-out, background-color 0ms",
     color: theme.palette.text.main,
   }),
 };
@@ -51,7 +52,7 @@ export const muiTableHeadProps = () => ({
     color: theme.palette.text.main,
     fontWeight: "bold",
     fontSize: "14px",
-    transition: "all 350ms ease-out",
+    transition: "all 350ms ease-out, background-color 0ms",
     ".MuiTableSortLabel-icon": {
       color: theme.palette.text.main + "!important",
     }
